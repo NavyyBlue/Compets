@@ -23,12 +23,13 @@ public class Compets extends Thread{
         int dog=0;
         while(true){ //bucle infinito
             try{
-                sleep((int)(Math.random()*2000));
+                sleep((int)(Math.random()*50));
+                
                 cat=pets.getCat().getLocation().x;
                 dog=pets.getDog().getLocation().x;
                 
                 if(cat<pets.getMeta().getLocation().x-125 && dog<pets.getMeta().getLocation().x-125){
-                    etiqueta.setLocation(etiqueta.getLocation().x+40,etiqueta.getLocation().y);
+                    etiqueta.setLocation(etiqueta.getLocation().x+5,etiqueta.getLocation().y);
                     pets.repaint();
                 }
                 else{
@@ -41,16 +42,17 @@ public class Compets extends Thread{
             
             if(etiqueta.getLocation().x>=pets.getMeta().getLocation().x-125){
                 if(cat>dog){
-                    Icon icono=new ImageIcon(getClass().getResource("/Carrera/manchas.png"));
+                    Icon icono=new ImageIcon(getClass().getResource("manchas.png"));
                     JOptionPane.showMessageDialog(null, "Ganó Manchas","Resultado",JOptionPane.INFORMATION_MESSAGE,icono);
                 }
                 else if(dog>cat){
-                    Icon icono=new ImageIcon(getClass().getResource("/Carrera/luffi.png"));
+                    Icon icono=new ImageIcon(getClass().getResource("luffi.png"));
                     JOptionPane.showMessageDialog(null, "Ganó Luffi","Resultado",JOptionPane.INFORMATION_MESSAGE,icono);
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "Empate","Resultado",JOptionPane.INFORMATION_MESSAGE);
                 }
+               
             }
         }
     }
