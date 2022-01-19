@@ -42,11 +42,11 @@ public class Compets extends Thread{
             
             if(etiqueta.getLocation().x>=pets.getMeta().getLocation().x-125){
                 if(cat>dog){
-                    Icon icono=new ImageIcon(getClass().getResource("manchas.png"));
+                    Icon icono=new ImageIcon(getClass().getResource("/Image/manchas.png"));
                     JOptionPane.showMessageDialog(null, "Ganó Manchas","Resultado",JOptionPane.INFORMATION_MESSAGE,icono);
                 }
                 else if(dog>cat){
-                    Icon icono=new ImageIcon(getClass().getResource("luffi.png"));
+                    Icon icono=new ImageIcon(getClass().getResource("/Image/luffi.png"));
                     JOptionPane.showMessageDialog(null, "Ganó Luffi","Resultado",JOptionPane.INFORMATION_MESSAGE,icono);
                 }
                 else{
